@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Picker</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #db05e2, #ffffff);
+      transition: background 0.5s ease;
+    }
+
+    nav {
+      background-color: #222;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    button {
+      margin: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    button#green {
+      background: rgb(26, 190, 48);
+    }
+
+    button#red {
+      background: orangered;
+    }
+
+    button#random {
+      background: linear-gradient(45deg, #607d8b, #90a4ae);
+    }
+    button#blue {
+      background: rgb(0, 162, 255);
+    }
+
+    .about {
+      margin-top: 2rem;
+      max-width: 600px;
+      font-size: 1rem;
+      color: #000000;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h3 {
+        font-size: 1.5rem;
+      }
+      .buttons{
+        display: flex;
+        flex-direction: column;
+      }
+      button {
+      
+        width: 60vw;
+        font-size: 0.9rem;
+      }
+
+      .about {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>My Color Generator</h1>
+  </nav>
+
+  <main>
+    <h3>Color Flipper</h3>
+   <div class="buttons"> <button id="green" onclick="setColor('green')">Green</button>
+    <button id="red" onclick="setColor('red')">Red</button>
+     <button id="blue" onclick="setColor('Blue')">Blue</button>
+    <button id="random" onclick="randomColor()">Random</button></div>
+
+    <div class="about">
+      <p>This is a simple color generator layout designed for choosing color of your choice you can use this for your project or any other thing where you need a color. Buttons are styled for the best user experience .</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Abdul's Projects. All rights reserved.
+  </footer>
+
+
+
+
+
+
+
+  <script src="main.js"></script>
+</body>
+</html>
